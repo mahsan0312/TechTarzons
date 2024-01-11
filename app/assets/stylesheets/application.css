@@ -13,3 +13,20 @@
  *= require_tree .
  *= require_self
  */
+
+
+body {
+     padding-top: 56px; /* Adjust the padding based on your navbar height */
+   }
+
+   .jumbotron {
+     background-color: #3498db;
+     color: #fff;
+     padding: 50px 0;
+   }
+
+   .article-preview {
+     margin-bottom: 20px;
+   }
+
+   /* Add more styles as needed */
