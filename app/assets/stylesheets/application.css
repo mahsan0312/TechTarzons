@@ -1,32 +1,51 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
-
-
-body {
-     padding-top: 56px; /* Adjust the padding based on your navbar height */
+/* Navigation Bar Styles */
+.navbar {
+     background-color: #2c3e50; /* Dark background color */
+     padding: 10px 0;
    }
 
-   .jumbotron {
-     background-color: #3498db;
+   .navbar-brand {
+     color: #ecf0f1; /* Text color for brand/logo */
+   }
+
+   .navbar-nav .nav-link {
+     color: #ecf0f1; /* Text color for navigation links */
+   }
+
+   .navbar-nav .nav-link:hover {
+     color: #3498db; /* Hover color for navigation links */
+   }
+
+   /* Hero Section Styles */
+   .hero-section {
+     background: url('your-image-url.jpg') center/cover; /* Replace 'your-image-url.jpg' with the actual image URL */
      color: #fff;
-     padding: 50px 0;
+     text-align: center;
+     padding: 100px 0;
+   }
+
+   .hero-heading {
+     font-size: 3rem;
+     margin-bottom: 20px;
+   }
+
+   /* Article Listing Styles */
+   .article-list {
+     padding: 20px;
    }
 
    .article-preview {
      margin-bottom: 20px;
+     padding: 20px;
+     border: 1px solid #ddd;
+     border-radius: 5px;
+     background-color: #ecf0f1;
    }
 
-   /* Add more styles as needed */
+   .article-preview h3 {
+     color: #3498db;
+   }
+
+   .article-preview p {
+     color: #333;
+   }
