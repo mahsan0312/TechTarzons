@@ -21,15 +21,19 @@
 			<div class="flex-md-row mb-4 box-shadow h-xl-300">
       <% @articles.each do |article| %>
 				<div class="mb-3 d-flex align-items-center">
-					<img height="80" src="assets/img/demo/blog4.jpg">
+          <%
+=begin%>
+ <%= image_tag("demo/blog4", height: 80) %>
+<%
+=end%>
 					<div class="pl-3">
 						<h2 class="mb-2 h6 font-weight-bold">
 						<a class="text-dark" href="./article.html"><%= article.title.titleize.presence %></a>
 						</h2>
 						<div class="card-text text-muted small">
-							<%= article.body %>
+							<%= truncate_body(article) %>
 						</div>
-						<small class="text-muted"><%= article.created_at.strftime('%b %d, %Y') %> &middot; 5 min read</small>
+						<small class="text-muted"><%= article.created_at.strftime('%b %d, %Y') %> &middot; <%= article.read_time %></small>
 					</div>
 				</div>
         <% end %>
@@ -53,7 +57,7 @@
 					<div class="card-text text-muted small">
 						 Jake Bittle in SCIENCE
 					</div>
-					<small class="text-muted">Dec 12 &middot; 5 min read</small>
+					<small class="text-muted">Dec 12 &middot; <5 min read></small>
 				</div>
 				<img height="120" src="assets/img/demo/blog8.jpg">
 			</div>
