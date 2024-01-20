@@ -21,13 +21,17 @@
 			<div class="flex-md-row mb-4 box-shadow h-xl-300">
       <% @articles.each do |article| %>
 				<div class="mb-3 d-flex align-items-center">
-          <%= image_tag("demo/blog4.jpg", height: 80) %>
+          <%
+=begin%>
+ <%= image_tag("demo/blog4", height: 80) %>
+<%
+=end%>
 					<div class="pl-3">
 						<h2 class="mb-2 h6 font-weight-bold">
 						<a class="text-dark" href="./article.html"><%= article.title.titleize.presence %></a>
 						</h2>
 						<div class="card-text text-muted small">
-							<%= article.body %>
+							<%= truncate_body(article) %>
 						</div>
 						<small class="text-muted"><%= article.created_at.strftime('%b %d, %Y') %> &middot; <%= article.read_time %></small>
 					</div>
