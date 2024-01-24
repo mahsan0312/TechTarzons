@@ -6,7 +6,7 @@
 					<div style="background-image: url(./assets/img/demo/1.jpg); height: 150px;    background-size: cover;    background-repeat: no-repeat;"></div>
 						<div class="card-body px-0 pb-0 d-flex flex-column align-items-start">
 							<h2 class="h4 font-weight-bold">
-								<a class="text-dark" href="./article.html"><% arc.title.titleize.presence %></a>
+	              <%= link_to arc.title.titleize.presence, article_path(arc) %>
 							</h2>
 							<p class="card-text">
 								<%= truncate_body(arc) %>
@@ -30,7 +30,7 @@
 =end%>
 					<div class="pl-3">
 						<h2 class="mb-2 h6 font-weight-bold">
-						<a class="text-dark" href="./article.html"><%= article.title.titleize.presence %></a>
+							<%= link_to article.title.titleize.presence, article_path(article) %>
 						</h2>
 						<div class="card-text text-muted small">
 							<%= truncate_body(article) %>
