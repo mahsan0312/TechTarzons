@@ -23,11 +23,7 @@
 			<div class="flex-md-row mb-4 box-shadow h-xl-300">
       <% @articles.each do |article| %>
 				<div class="mb-3 d-flex align-items-center">
-          <%
-=begin%>
- <%= image_tag("demo/blog4", height: 80) %>
-<%
-=end%>
+	 			  <%= image_tag("", height: 80) %>
 					<div class="pl-3">
 						<h2 class="mb-2 h6 font-weight-bold">
 							<%= link_to article.title.titleize.presence, article_path(article) %>
