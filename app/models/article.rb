@@ -10,4 +10,8 @@ class Article < ApplicationRecord
   def read_time
     "#{minutes_read} min read"
   end
+
+  def time_format
+    created_at.strftime('%b %d, %Y')
+  end
 end

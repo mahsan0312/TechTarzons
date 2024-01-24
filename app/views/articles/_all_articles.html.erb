@@ -12,7 +12,7 @@
 				<div class="card-text text-muted small">
 					<%= all_article.user&.name %>
 				</div>
-				<small class="text-muted">Dec 12 &middot; <5 min read></small>
+				<small class="text-muted"><%= all_article.time_format %> &middot; <%= all_article.read_time %></small>
 			</div>
 			<img height="120" src="assets/img/demo/blog8.jpg">
 		</div>
