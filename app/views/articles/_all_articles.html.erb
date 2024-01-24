@@ -1,5 +1,5 @@
 <div class="col-md-8">
-  <h5 class="font-weight-bold spanborder"><span>All Stories</span></h5>
+	<h5 class="font-weight-bold spanborder"><span>All Stories</span></h5>
   <% @articles.each do |all_article| %>
 		<div class="mb-3 d-flex justify-content-between">
 			<div class="pr-3">
@@ -12,7 +12,7 @@
 				<div class="card-text text-muted small">
 					<%= all_article.user&.name %>
 				</div>
-				<small class="text-muted">Dec 12 &middot; <5 min read></small>
+				<small class="text-muted"><%= all_article.time_format %> &middot; <%= all_article.read_time %></small>
 			</div>
 			<img height="120" src="assets/img/demo/blog8.jpg">
 		</div>
