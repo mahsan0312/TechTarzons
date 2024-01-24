@@ -1,45 +1,17 @@
 <div class="col-md-4 pl-4">
   <h5 class="font-weight-bold spanborder"><span>Popular</span></h5>
-		<ol class="list-featured">
-			<li>
-				<span>
-          <h6 class="font-weight-bold">
-            <a href="./article.html" class="text-dark">Did Supernovae Kill Off Large Ocean Animals?</a>
-          </h6>
-          <p class="text-muted">
-            Jake Bittle in SCIENCE
-          </p>
-        </span>
-      </li>
+  <ol class="list-featured">
+    <%= @articles.each do |popular|%>
       <li>
         <span>
           <h6 class="font-weight-bold">
-            <a href="./article.html" class="text-dark">Humans Reversing Climate Clock: 50 Million Years</a>
+            <a href="./article.html" class="text-dark"><%= popular.title.titleize %></a>
           </h6>
           <p class="text-muted">
-            Jake Bittle in SCIENCE
+            <%= popular.category %>
           </p>
         </span>
       </li>
-      <li>
-      <span>
-      <h6 class="font-weight-bold">
-      <a href="./article.html" class="text-dark">Unprecedented Views of the Birth of Planets</a>
-      </h6>
-      <p class="text-muted">
-        Jake Bittle in SCIENCE
-      </p>
-      </span>
-      </li>
-      <li>
-      <span>
-      <h6 class="font-weight-bold">
-      <a href="./article.html" class="text-dark">Effective New Target for Mood-Boosting Brain Stimulation Found</a>
-      </h6>
-      <p class="text-muted">
-        Jake Bittle in SCIENCE
-      </p>
-      </span>
-      </li>
-    </ol>
-  </div>
+    <% end %>
+  </ol>
+</div>
