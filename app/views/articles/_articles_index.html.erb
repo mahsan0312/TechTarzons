@@ -1,0 +1,45 @@
+<div class="container pt-4 pb-4">
+	<div class="row">
+		<div class="col-lg-6">
+			<div class="card border-0 mb-4 box-shadow h-xl-300">
+        <% @articles.each do |arc| %>
+					<div style="background-image: url(./assets/img/demo/1.jpg); height: 150px;    background-size: cover;    background-repeat: no-repeat;"></div>
+						<div class="card-body px-0 pb-0 d-flex flex-column align-items-start">
+							<h2 class="h4 font-weight-bold">
+								<a class="text-dark" href="./article.html"><% arc.title.titleize.presence %></a>
+							</h2>
+							<p class="card-text">
+								<%= truncate_body(arc) %>
+							</p>
+							<div>
+								<small class="d-block"><a class="text-muted" href="./author.html">Favid Rick</a></small>
+								<small class="text-muted"><%= arc.time_format %></small>
+							</div>
+					</div>
+				<% end %>
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="flex-md-row mb-4 box-shadow h-xl-300">
+      <% @articles.each do |article| %>
+				<div class="mb-3 d-flex align-items-center">
+          <%
+=begin%>
+ <%= image_tag("demo/blog4", height: 80) %>
+<%
+=end%>
+					<div class="pl-3">
+						<h2 class="mb-2 h6 font-weight-bold">
+						<a class="text-dark" href="./article.html"><%= article.title.titleize.presence %></a>
+						</h2>
+						<div class="card-text text-muted small">
+							<%= truncate_body(article) %>
+						</div>
+						<small class="text-muted"><%= article.time_format %> &middot; <%= article.read_time %></small>
+					</div>
+				</div>
+        <% end %>
+			</div>
+		</div>
+	</div>
+</div>
