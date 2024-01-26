@@ -104,12 +104,12 @@ sup {
 top: -.5em; }
 
 a {
-color: #03a87c;
+color: #191b1a;
 text-decoration: none;
 background-color: transparent;
 -webkit-text-decoration-skip: objects; }
 a:hover {
-     color: #025d45;
+     color: #191b1a;
      text-decoration: underline; }
 
 a:not([href]):not([tabindex]) {
@@ -413,12 +413,12 @@ sup {
 top: -.5em; }
 
 a {
-color: #03a87c;
+color: #191b1a;
 text-decoration: none;
 background-color: transparent;
 -webkit-text-decoration-skip: objects; }
 a:hover {
-     color: #025d45;
+     color: #191b1a;
      text-decoration: underline; }
 
 a:not([href]):not([tabindex]) {
@@ -8745,10 +8745,10 @@ a, a:hover {
 transition: all .2s; }
 
 a {
-color: #03a87c; }
+color: #191b1a }
 
 a.text-dark:hover {
-color: #03a87c !important; }
+color: #191b1a !important; }
 
 .c-pointer:hover {
 cursor: pointer; }
