@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_01_22_171135) do
+ActiveRecord::Schema[7.0].define(version: 2024_01_26_191804) do
   create_table "article_categories", force: :cascade do |t|
     t.integer "article_id", null: false
     t.integer "category_id", null: false
@@ -29,6 +29,9 @@ ActiveRecord::Schema[7.0].define(version: 2024_01_22_171135) do
     t.integer "minutes_read"
     t.integer "popularity"
     t.boolean "paid"
+    t.integer "category_id", null: false
+    t.integer "custom_category_id"
+    t.index ["category_id"], name: "index_articles_on_category_id"
     t.index ["user_id"], name: "index_articles_on_user_id"
   end
 
@@ -73,6 +76,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_01_22_171135) do
 
   add_foreign_key "article_categories", "articles"
   add_foreign_key "article_categories", "categories"
+  add_foreign_key "articles", "categories"
   add_foreign_key "articles", "users"
   add_foreign_key "user_roles", "roles"
   add_foreign_key "user_roles", "users"
