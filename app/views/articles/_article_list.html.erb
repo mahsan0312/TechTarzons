@@ -1,0 +1,16 @@
+<!-- HTML structure for displaying each article -->
+<div class="mb-3 d-flex justify-content-between">
+     <div class="pr-3">
+          <img height="120" src="assets/img/demo/blog8.jpg">
+          <h2 class="mb-1 h4 font-weight-bold">
+               <%= link_to article.title.titleize.presence, article_path(article) %>
+          </h2>
+          <p>
+               <%= truncate_body(article) %>
+          </p>
+          <div class="card-text text-muted small">
+               <%= article.user&.name %>
+          </div>
+          <small class="text-muted"><%= article.time_format %> &middot; <%= article.read_time %></small>
+     </div>
+</div>

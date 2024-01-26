@@ -1,6 +1,4 @@
 class ArticlesController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
-  before_action :authorize_admin!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
     @articles = Article.all
@@ -8,6 +6,10 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+  end
+
+  def all_articles
+    @all_articles = Article.all
   end
 
   def new

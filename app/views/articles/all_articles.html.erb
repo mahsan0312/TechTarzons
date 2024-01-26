@@ -1,0 +1,7 @@
+<div class="col-md-8">
+     <h5 class="font-weight-bold spanborder"><span>All Stories</span></h5>
+     <% @all_articles.each do |article| %>
+          <!-- Render each article -->
+          <%= render partial: 'article_list', locals: { article: article } %>
+     <% end %>
+</div>
