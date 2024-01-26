@@ -9263,10 +9263,22 @@ counter-reset: my-awesome-counter;
 list-style: none;
 padding-left: 0; }
 
-ol.list-featured li {
+/* Define the counter */
+ol.list-featured {
+counter-reset: my-awesome-counter;
+}
+
+/* Increment the counter and display it */
+ol.list-featured li::before {
 counter-increment: my-awesome-counter;
+content: counter(my-awesome-counter) ". "; /* Display the counter content */
+}
+
+/* Additional styles for list items */
+ol.list-featured li {
 display: flex;
-font-size: 0.8rem; }
+font-size: 0.8rem;
+}
 
 ol.list-featured li:before {
 content: "0" counter(my-awesome-counter);

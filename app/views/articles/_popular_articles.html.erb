@@ -1,17 +1,17 @@
 <div class="col-md-4 pl-4">
   <h5 class="font-weight-bold spanborder"><span>Popular</span></h5>
-  <% @articles.each do |popular|%>
-    <ol class="list-featured">
+  <ol class="list-featured">
+    <% @articles.each do |popular| %>
       <li>
         <span>
           <h6 class="font-weight-bold">
-  				  <%= link_to popular.title.titleize.presence, article_path(popular) %>
+            <%= link_to popular.title.titleize.presence, article_path(popular) %>
           </h6>
           <p class="text-muted">
             <%= popular.body %>
           </p>
         </span>
       </li>
-    </ol>
-  <% end %>
+    <% end %>
+  </ol>
 </div>
