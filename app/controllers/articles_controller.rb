@@ -10,6 +10,10 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
 
+  def all_articles
+    @all_articles = Articles.all
+  end
+
   def new
     @article = Article.new
   end
