@@ -1,10 +1,10 @@
 <div class="col-md-8">
 	<h5 class="font-weight-bold spanborder"><span>All Stories</span></h5>
-  <% @articles.each do |all_article| %>
+	<% @articles.each do |all_article| %>
 		<div class="mb-3 d-flex justify-content-between">
 			<div class="pr-3">
 				<h2 class="mb-1 h4 font-weight-bold">
-					<a class="text-dark" href="./article.html"><%= all_article.title.titleize %></a>
+					<%= link_to all_article.title.titleize.presence, article_path(all_article) %>
 				</h2>
 				<p>
 					<%= truncate_body(all_article) %>
