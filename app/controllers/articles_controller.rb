@@ -9,7 +9,7 @@ class ArticlesController < ApplicationController
   end
 
   def all_articles
-    @all_articles = Articles.all
+    @all_articles = Article.all
   end
 
   def new
