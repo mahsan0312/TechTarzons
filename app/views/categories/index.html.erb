@@ -1,0 +1,15 @@
+<!-- index.html.erb -->
+<h1>Categories</h1>
+<ul>
+  <% @categories.each do |category| %>
+    <li><%= link_to category.name, category_path(category) %></li>
+  <% end %>
+</ul>
+
+<!-- show.html.erb -->
+<h1><%= @category.name %></h1>
+<ul>
+  <% @category.articles.each do |article| %>
+    <li><%= link_to article.title, article_path(article) %></li>
+  <% end %>
+</ul>
