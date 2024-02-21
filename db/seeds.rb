@@ -7,6 +7,20 @@ user = User.find_by(email: "mmahsan0312@gmail.com")
 # Define categories
 categories = Category.where(name: ["Technology", "Travel", "Programming"])
 
+# Create categories with descriptions
+categories_data = [
+  { name: "Technology", description: "Articles related to technology and innovation." },
+  { name: "Travel", description: "Explore destinations, travel tips, and adventure stories." },
+  { name: "Programming", description: "Learn about coding, programming languages, and software development." }
+]
+
+categories_data.each do |category_data|
+  cate = Category.find_by(name: category_data[:name])
+  cate.update(description: category_data[:description])
+end
+
+puts "Categories seeded successfully."
+
 # Define articles data
 articles_data = [
   {
