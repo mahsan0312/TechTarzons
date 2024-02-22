@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'about/index'
   devise_for :users
   root 'articles#index'
   resources :articles do
@@ -8,4 +9,5 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :articles
   end
+  get '/about', to: 'about#index'
 end
